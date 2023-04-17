@@ -1,0 +1,32 @@
+https://tutorcs.com
+WeChat: cstutorcs
+QQ: 749389476
+Email: tutorcs@163.com
+comp2620 logic puzzle Faulty Circuit
+
+Faulty Circuit Logician Series
+This problem illustrates the possibility of using logic as a tool for diagnosis. The solver has to deduce from the specification given together with some test data which component or components in a boolean circuit may be incorrect. Of course, the assumption that the number of incorrect components is minimal is not logically implied by the rest of the problem setup: in diagnosis it is common to make an assumption like this to the effect that the system is as near correct as is compatible with the data.
+
+We consider logic circuits built up by connecting gates of the following sorts:
+
+NOT	one input;	output the opposite value.
+F	one input;	output (always) false.
+T	one input;	output (always) true.
+AND	two inputs;	output true if both inputs true, otherwise false.
+OR	two inputs;	output true if at least one input true, otherwise false.
+NAND	two inputs;	output true if at least one input false, otherwise false.
+NOR	two inputs;	output true if both inputs false, otherwise false.
+XNOR	two inputs;	output true if both inputs the same, false if they are different.
+XOR	two inputs;	output true if the inputs are different, false if both the same.
+The image above is the specification for a logic circuit for computing an output E in terms of four inputs A, B, C and D
+
+Unfortunately, the actual device does not exactly match the above specification: at least one of the components has been incorrectly installed, so that where there should be one sort of gate there is actually another. Some test data are as follows:
+
+INPUTS	OUTPUT
+A	B	C	D	E
+Trial 1	True	True	True	True	True
+Trial 2	False	False	True	False	True
+Trial 3	True	True	False	True	True
+Trial 4	True	True	True	False	True
+Trial 5	True	True	False	False	False
+Assuming the set of faults is as small as possible given the data, identify the incorrect component(s).
